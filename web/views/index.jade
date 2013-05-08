@@ -1,0 +1,36 @@
+extends layout
+
+block body
+
+  div(ng-controller='AppCtrl')
+    nav.top-bar
+      ul.title-area
+        li.name
+          h1
+            a(href='#') Pebble Messenger
+        li.toggle-topbar.menu-icon
+          a(href='#')
+            span Menu
+      section.top-bar-section
+        ul.left
+          li
+            a(href='/send/') Send Message
+          li
+            a(href='/about/') About
+
+    noscript
+      .row
+        .large-12.columns
+          .alert-box This site quite heavily relies on Javascript to work. 
+
+    div(ng-view, ng-cloak)
+      include partials/send
+
+
+  script(src='js/lib/angular/angular.min.js')
+  script(src='/socket.io/socket.io.js')
+  script(src='js/app.js')
+  script(src='js/services.js')
+  script(src='js/controllers.js')
+  script(src='js/filters.js')
+  script(src='js/directives.js')

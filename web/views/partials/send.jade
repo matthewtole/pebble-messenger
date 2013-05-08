@@ -1,0 +1,22 @@
+.row
+
+  .large-6.columns
+
+    form
+      fieldset
+        .alert-box(ng-show="sendError") {{ sendError.message || sendError }}
+        .alert-box.success(ng-show="sendSuccess") Message successfully sent!
+        input(type="text", ng-model="message.title", placeholder="Message Title", autofocus)
+        textarea(ng-model="message.body", placeholder="Message Content")
+        a.button.success.expand(type="submit", ng-click="sendMessage(message)", ng-disabled="formValid()==false") Send Message
+
+  .large-6.columns
+    .pebble-face-wrapper
+      .pebble-face.pebble-face-black
+      .pebble-screen
+        .pebble-text
+          .pebble-text-header(ng-bind="message.title")
+          .pebble-text-body(ng-bind="message.body")
+      .pebble-screen-overlay
+
+// img#compare(src="/img/IMG_20130421_150211.png")
