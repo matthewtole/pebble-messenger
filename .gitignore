@@ -1,3 +1,7 @@
+#########
+ Android
+#########
+
 # built application files
 *.apk
 *.ap_
@@ -18,3 +22,23 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+
+#########
+ Node.js
+#########
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
